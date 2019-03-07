@@ -1,0 +1,55 @@
+/* 产品 */
+.productAndCompany {
+  width: 50%;
+  height: 219px;
+  padding-top: 40px;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+/* 公共 - 产品名称 */
+.productAndCompanyCommon {
+  width: 80%;
+  height: 40px;
+  padding-top: 8px;
+}
+
+/* 公共 - 产品名称 label */
+.product_label_Common {
+  display: inline-block;
+  width: 39%;
+}
+
+/* 公共 - 产品名称 input */
+.product_input_Common {
+  display: inline-block;
+  width: 160px;
+  height: 24px;
+  margin-right: 6px;
+}
+
+/* 覆盖 - infParaCon */
+.infParaCon {
+  position: relative;
+}
+
+/* 散 乱 污 */
+.inputChild_big {
+  position: absolute;
+  top: 0;
+  left: 409px;
+}
+
+/* 原辅料 */
+.furnacesRawMaterials {
+  display: inline-block;
+  width: 398px;
+  height: 100px;
+}
+.furnacesRawMaterials_name {
+  width: 160px;
+  height: 100px;
+  font-size: 12px;
+  border: 1px solid gray;
+  overflow: scroll;
+}

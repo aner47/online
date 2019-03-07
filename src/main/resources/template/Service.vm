@@ -1,0 +1,15 @@
+package ${servicePackage};
+
+import ${entity};
+import com.${project}.service.BaseService;
+
+/**
+ * ${entityDescription}服务接口
+ *
+ */
+public interface ${entityName}Service extends BaseService<${entityName}, ${idType}> {
+		
+		public ${entityName} save${entityName}(${entityName} ${beanName}) throws Exception;
+		public ${entityName} update${entityName}(${entityName} ${beanName}) throws Exception;
+	
+}

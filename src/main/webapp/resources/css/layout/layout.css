@@ -1,0 +1,38 @@
+.container {
+	margin-top: 10px;
+}
+
+.query-title {
+	font-size: 28px;
+}
+
+.btn {
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-family: arial, verdana, sans-serif, 'ÐÂËÎÌå';
+	font-size: 22px;
+	text-decoration: none;
+	cursor: pointer
+}
+
+
+.query_block {
+	margin-top: 10px;
+	border: 2px solid #eee;
+	padding: 10px;
+	width: 99%;
+}
+
+input[type="text"],input[type="date"]{
+	border-radius: 3px;
+	font-size: 18px;
+}
+textarea {
+	width: 300px;
+	height: 90px;
+	border-radius: 3px;
+	font-size: 18px;
+}

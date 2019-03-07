@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>${entityDescription}</title>
+</head>
+
+<script type="text/javascript">
+require(["validate","ajaxform"],function(a){
+		$('#commit').click(function(){
+			$("#inputForm").submit();
+		})
+		//提交表单
+		$("#inputForm").validate({
+			rules: {
+			},
+			messages:{
+			},
+			submitHandler:function(form){
+				var options  = {
+			        url:'save.jhtml',
+			        type:'post',
+			        dataType : 'json',
+			        success:function(data){
+						layer.msg('添加成功！', {icon: 6})
+						layer.closeAll('page');
+						grid1.loadData();
+			        },
+			        error:function(){
+			        	layer.msg('添加失败',{icon:3});
+			        }
+			    };
+				$(form).ajaxSubmit(options);
+				return false;
+			}
+		});		
+	});
+</script>
+
+<body>
+
+<form id="inputForm">
+    <div class="container">
+	#foreach ($column in $columns)
+		#if($column.create)
+			<div class="form-line">
+	            <label for="${column.name}" >${column.caption} ：</label>
+	            #if($column.inputType == "textarea")
+	            	 <textarea id="${column.name}" name="${column.name}" placeholder="${column.caption}"></textarea>
+	            #else
+	             <input type="${column.inputType}" id="${column.name}" name="${column.name}" placeholder="${column.caption}"/>
+	            #end
+	           
+	        </div>
+		#end
+	#end
+
+
+    </div>
+
+</form>
+</body>
+</html>

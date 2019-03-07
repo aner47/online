@@ -1,0 +1,18 @@
+package ${daoImplPackage};
+
+import org.springframework.stereotype.Repository;
+
+import ${entity};
+import ${entityDao};
+import com.${project}.dao.impl.BaseDaoImpl;
+
+/**
+ * dao-${entityDescription}实现
+ *
+ */
+@Repository("${beanName}")
+public class ${entityName}DaoImpl extends BaseDaoImpl<${entityName}, ${idType}> implements ${entityName}Dao {
+
+
+
+}

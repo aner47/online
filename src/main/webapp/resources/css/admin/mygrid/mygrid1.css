@@ -1,0 +1,187 @@
+.mygrid_title {
+	height: 30px;
+	line-height: 22px;
+	font-weight: normal;
+	text-align: center;
+	white-space: nowrap;
+	background-color: #B6D0FF;;
+}
+
+.mygrid {
+	display: none;
+}
+
+.mygrid_content{
+	width: 100%;
+	overflow-x: auto;
+	padding-bottom: 1px;
+}
+
+.mygrid_content.autoW .mygrid_table{
+	width: auto;
+	min-width: 100%;
+}
+
+.mygrid_content.autoW .mygrid_title th{
+	white-space: nowrap;
+}
+
+.mygrid_content.autoW div.order{
+	position: relative;
+	top: -1px;
+}
+
+.mygrid_title th {
+	text-align: left;
+	border-left: 1px solid #ddd;
+	padding-left: 5px;
+	font-weight: normal;
+	position: relative;
+	padding-right: 5px;
+	white-space: normal;
+	word-break: break-all;
+}
+
+.mygrid_table {
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.mygrid_table td {
+	white-space: nowrap;
+	overflow: hidden;
+	word-break: keep-all;
+	text-overflow: ellipsis;
+	text-align: left;
+	margin-left: 5px;
+	padding-left: 5px;
+}
+
+.mygrid_column {
+	font-size: smaller;
+	font-family: serif;
+	text-align: center;
+	line-height: 30px;
+	cursor:pointer;
+}
+
+.mygrid_column:hover
+{
+	background-color: rgba(24, 228, 213, 0.37);
+}
+
+.mygrid_column_odd {
+	background-color: #F7FAFF;
+}
+
+.mygrid_selected {
+	background-color: rgba(24, 228, 213, 0.37);
+}
+
+.mygrid_column_even {
+}
+.mygrid_hidden {
+	display: none;
+}
+.grid-tool{
+
+}
+/*閻庢稒銇炵紞瀣炊閻愵剛鍨�*/
+.mygrid_table .iconfont {
+	line-height: 22px;
+	height: 18px;
+	display: inline-block;
+	border-left: 1px solid #dddddd;
+	margin-right: 4px;
+}
+.mygrid_table .iconfont:first-child{
+	border-left: 0;
+}
+.mygrid_table .iconfont:hover{
+	color: #4274fe;
+}
+.mygrid_table .iconfont::after{
+	position: relative;
+	top: -1px;
+	/*鐎甸偊鍠涢拏瀣⒖閸涘鎷�*/
+	font-family: sans-serif, "\5FAE\8F6F\96C5\9ED1";
+}
+.mygrid_table .iconfont:hover::after{
+	font-weight: bold;
+}
+.mygrid_table .icon-xiangqing::after {
+	/*閻犲浄闄勯崕锟�*/
+	content: "\8BE6\60C5";
+}
+.mygrid_table .icon-zhongxinjisuan::after {
+	/*闂佹彃绉甸弻濠勬媼閿涘嫮鏆�*/
+	content: "\91CD\65B0\8BA1\7B97";
+}
+.mygrid_table .icon-qingdanjisuan::after {
+	/*婵炴挸鎳庡畷鐔烘媼閿涘嫮鏆�*/
+	content: "\6E05\5355\8BA1\7B97";
+}
+.mygrid_table .icon-wancheng::after {
+	/*閻庡厜鍓濋悧锟�*/
+	content: "\5BA1\6838";
+}
+.mygrid_table .icon-xiugai::after {
+	/*濞ｅ浂鍠楅弫锟�*/
+	content: "\4FEE\6539";
+}
+.mygrid_table .icon-shengchenghuodongshuju::after {
+	/*闁汇垻鍠愰崹姘虹拠鎻捫楅柡浣哄瀹擄拷*/
+	content: "\751F\6210\6D3B\52A8\6570\636E";
+}
+/*閻庢稒銇炵紞瀣炊閻愵剛鍨�*/
+/*闁告娲ょ花顓㈡⒔瀹ュ懐纰嶉柟绋款樀閹革拷*/
+/*<div class="order"><div class="goUp"></div><div class="goDown"></div></div>*/
+.mygrid_title th > span{
+	max-width: calc(100% - 16px);
+	max-width: -moz-calc(100% - 16px);
+	max-width: -webkit-calc(100% - 16px);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+}
+div.order{
+	display: inline-block;
+	height: 18px;
+	width: 13px;
+	margin: auto;
+	margin-left: 4px;
+	color: transparent;
+	top: 0px;
+	bottom: 0px;
+	overflow: hidden;
+	position: absolute;
+}
+div.order div{
+	position: absolute;
+	left: 0;
+	width: 13px;
+	height: 8px;
+}
+div.order .goUp{
+	top: 0;
+	background-image: url("../../../../../img/up.png");
+}
+div.order .goDown{
+	bottom: 0;
+	background-image: url("../../../../../img/down.png");
+}
+/*闁告鎷�*/
+.mygrid_title th[order="up"] div.order .goUp{
+	background-image: url("../../../../../img/onup.png");
+}
+/*闂傚嫸鎷�*/
+.mygrid_title th[order="down"] div.order .goDown{
+	background-image: url("../../../../../img/ondown.png");
+}
+/*闁哄啰濮寸花锟�*/
+.mygrid_title th[order="disorder"] div.order .goUp{
+}
+.mygrid_title th[order="disorder"] div.order .goDown{
+}
+/*闁告娲ょ花顓㈡⒔瀹ュ懐纰嶉柟绋款樀閹革拷*/

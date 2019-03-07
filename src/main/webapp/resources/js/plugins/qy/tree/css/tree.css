@@ -1,0 +1,143 @@
+@charset "UTF-8";
+.qy-tree ul,.qy-tree li{
+    float: left;
+    width: 100%;
+}
+.qy-tree > .tree-parent span, .qy-tree > .tree-parent i, .qy-tree > .tree-parent ul, .qy-tree > .tree-parent li {
+  cursor: pointer;
+}
+
+.qy-tree > .tree-parent > .tree-node {
+  /*一级子叶基本样式*/
+  font-size: 15px;
+  color: #142140;
+  width: 100%;
+  line-height: 70px;
+  letter-spacing: 0.3px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.qy-tree > .tree-parent > .tree-node:hover {
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+}
+
+.qy-tree > .tree-parent > .tree-node.active {
+  background-color: #ffffff;
+  border-right: 0;
+  font-weight: bold;
+}
+
+.qy-tree > .tree-parent > .tree-node.active .iconfont {
+  color: #4274fe;
+}
+
+.qy-tree > .tree-parent > .tree-parent.active {
+  /*一级子叶（含有下级子叶）的样式*/
+  background-color: #ffffff;
+}
+
+.qy-tree > .tree-parent > .tree-parent.active:hover {
+  border-right: 0;
+}
+
+.qy-tree > .tree-parent > .tree-parent.active .iconfont {
+  color: #4274fe;
+}
+.qy-tree > .tree-parent > .tree-parent > span{
+    display: block;
+    float: left;
+}
+.qy-tree > .tree-parent > .tree-parent .icon-shixinsanjiaoright {
+    display: block;
+    float: right;
+}
+.qy-tree > .tree-parent > .tree-parent[isslide="true"]{
+  font-weight: bold;
+}
+.qy-tree > .tree-parent > .tree-parent[isslide="true"] .icon-shixinsanjiaoright {
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg);     /* IE 9 */
+    -moz-transform:rotate(90deg);    /* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+    -o-transform:rotate(90deg); 
+}
+.qy-tree > .tree-parent > .tree-parent.active .icon-shixinsanjiaoright {
+  color: #000000;
+  
+  /*margin-left: -3px;*/
+}
+/*.qy-tree > .tree-parent > .tree-parent.active .icon-shixinsanjiao{
+    color: #000000;
+    margin-left: -3px;
+}*/
+
+.qy-tree > .tree-parent > .tree-parent {
+  background-color: transparent;
+}
+
+.qy-tree > .tree-parent > .tree-parent:hover {
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+}
+
+.qy-tree > .tree-parent > .tree-parent .iconfont {
+  color: #000000;
+  font-weight: normal;
+}
+.qy-tree > .tree-parent > .tree-node i:first-child {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    margin-right: -9px;
+}
+
+.qy-tree > .tree-parent > .tree-parent .three-node {
+  /*二级子叶的样式*/
+  font-size: 16px;
+  width: 100%;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.qy-tree > .tree-parent > .tree-parent .three-node:nth-child(2) {
+  margin-top: -16px;
+}
+
+.qy-tree > .tree-parent > .tree-parent .three-node.active {
+  background-color: #B6D0FF;
+  color: #142140;
+  font-weight: bold;
+}
+
+.qy-tree > .tree-parent > .tree-parent .three-node.active .iconfont {
+  color: #4075fe;
+}
+
+.qy-tree > .tree-parent > .tree-parent .three-node .iconfont {
+  color: #b6d0ff;
+}
+
+.qy-tree > .tree-parent > .tree-parent .three-node:last-child{
+    margin-bottom: 10px;
+}
+
+.qy-tree > .tree-parent > .tree-parent .three-node i::before{
+	content: "";
+    width: 5px;
+    height: 5px;
+    display: block;
+    margin: auto;
+    margin-top: -8px;
+    border-radius: 3px;
+    line-height: 30px;
+    background-color: #caddff;
+}
+
+.qy-tree > .tree-parent > .tree-parent .three-node.active i::before{
+    background-color: #4075fe;
+}
+
+.qy-tree .caption{
+	display: inline-block;
+}

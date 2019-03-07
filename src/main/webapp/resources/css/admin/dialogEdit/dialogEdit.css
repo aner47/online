@@ -1,0 +1,39 @@
+.photoImgBigShow {
+	position: fixed;
+	top: 2px;
+	left: 200px;
+	z-index: 99999999;
+	width: 580px;
+	height: 840px;
+	display: none;
+	background: rgb(255, 255, 255);
+}
+.closeBigImg {
+	display: block;
+	width: 50px;
+	height: 26px;
+	float: right;
+	font-size: 16px;
+	line-height: 26px;
+	text-align: center;
+	color: rgb(192, 192, 192);
+	cursor: pointer;
+}
+.BMap_cpyCtrl {
+    display: none;
+}
+.anchorBL {
+    display: none;
+}
+.infParaCon .infpCon .label {
+	margin-right: 7px;
+}
+.infParaCon .infpLable {
+	font-size: 14px;
+}
+
+.businessLicense {
+	background: url(../../../img/businessLicense.png) center center no-repeat;
+	background-size:90px 120px;
+
+}

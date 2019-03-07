@@ -1,0 +1,13 @@
+package ${daoPackage};
+
+import ${entity};
+import com.${project}.dao.BaseDao;
+
+/**
+ * dao-${entityDescription}
+ *
+ */
+public interface ${entityName}Dao extends BaseDao<${entityName}, ${idType}> {
+
+
+}

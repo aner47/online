@@ -1,0 +1,81 @@
+
+*{
+    padding:0;
+    margin: 0;
+    list-style: none;
+
+}
+.multselect-container{
+    height: auto;
+    float: left;
+}
+.multselect-container div{
+    width: 251px;
+    height: 270px;
+    float: left;
+    border: 1px solid #d4d8de;
+    margin-left: 16px;;
+    border-radius: 3px;
+    overflow: auto;
+    padding-top: 32px;
+}
+#contain1{
+    margin-left: 0px;
+}
+.multselect-container h1 {
+    font-size: 18px;
+    /*font-weight: bold;*/
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    /*background-color: #e9f1ff;*/
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #e0e0e0;
+    margin-top: -32px;
+}
+.multselect-container ul {
+    height: 100%;
+    overflow: auto;
+}
+.multselect-container  div ul li{
+    width: 100%;
+    height: 33px;
+    border-bottom: 1px solid #efefef;
+    padding-left: 24px;
+    text-align: left;
+    list-style: none;
+    line-height: 33px;
+    color: #121212;
+}
+.multselect-container .buttonContainer{
+    width: 28px;
+    border: 0;
+    padding-top: 56px;
+    overflow: visible;
+    /*height:180px;*/
+}
+.multselect-container .buttonContainer .criclebtn{
+    width: 28px;
+    font-size: 14px;
+    margin-bottom: 13px;
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    height: 30px;
+    color: #6389e9;
+    line-height: 32px;
+    box-shadow: 0 0 14px -1px #e5e5e5;
+}
+.multselect-container .buttonContainer .criclebtn:hover{
+    background-color: #3465e2; 
+    color: #ffffff;
+}
+.multselect-container  .selected{
+    background-color: #b6d0ff;
+}
+.multselect-container .clear{
+    clear: both;
+    display:  block;
+}

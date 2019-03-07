@@ -1,0 +1,61 @@
+.progresbar_cover {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	background: #c0c0c0;
+	opacity: 0.3;
+	z-index: 999;
+	border: 0;
+	height: auto;
+	background: #c0c0c0;
+}
+
+.progresbar_degree_contain {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 50%;
+	height: 40px;
+	z-index: 1001;
+	background: #fff;
+	border: 0;
+	color: #fff;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+.progresbar_degree {
+	height: 40px;
+	line-height: 40px;
+	text-align: right;
+	width: 0;
+	border: 0px;
+	transition: width 0.2s ease-in-out;
+	position: relative;
+	border-radius: 4px;
+	background-color: #14c3a2;
+	background-image: repeating-linear-gradient(-45deg, #14c3a2, #14c3a2 30px, #22e8c3 30px,
+		#22e8c3 60px);
+	background-size: 600px 100%;
+	animation: barberpole 10s linear infinite;
+	border-bottom: 0.2rem solid #0d7e68;
+	white-space: nowrap;
+}
+
+@
+keyframes barberpole { 
+	0% {
+		background-position: 0% 0%;
+	}
+	100%
+	{
+		background-position:600px 0%;
+	}
+}

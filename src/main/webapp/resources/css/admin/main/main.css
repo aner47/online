@@ -1,0 +1,714 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+html body {
+  height: 100%;
+  min-width: 1200px;
+  font: 12px "sans-serif","微软雅黑";
+  color: #000000;
+  overflow-y: hidden;
+  padding: 0;
+  padding-top: 90px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding-top: 0;
+  font-weight: normal;
+  font-size: medium;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  float: left;
+  padding-left: 200px;
+  -webkit-transition: padding 1s ease;
+  -moz-transition: padding 1s ease;
+  -ms-transition: padding 1s ease;
+  -o-transition: padding 1s ease;
+  transition: padding 1s ease;
+}
+
+.wrap .leftFrame {
+  height: 100%;
+  width: 200px;
+  border-right: 1px solid #e0e0e0;
+  margin-left: -200px;
+  float: left;
+  background-color: #e9f1ff;
+  position: relative;
+}
+
+.wrap .leftFrame .stretchOut {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 200px;
+  height: 35px;
+  width: 19px;
+  line-height: 31px;
+  text-align: center;
+  color: #2461ff;
+  border-top-right-radius: 19px;
+  border-bottom-right-radius: 19px;
+  border: 2px solid #e2e2e2;
+  border-left: 0;
+  background-color: #a8c7ff;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -ms-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+  cursor: pointer;
+}
+
+.wrap .leftFrame .drawBack {
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: -1px;
+  height: 35px;
+  width: 19px;
+  line-height: 31px;
+  text-align: center;
+  color: #2461ff;
+  border-top-left-radius: 19px;
+  border-bottom-left-radius: 19px;
+  border: 2px solid #e2e2e2;
+  border-right: 0;
+  background-color: #a8c7ff;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -ms-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+  cursor: pointer;
+}
+
+.wrap .leftFrame .drawBack .iconfont {
+  font-size: 13px;
+  font-weight: bold;
+  color: #2461ff;
+}
+
+.wrap .leftFrame .stretchOut .iconfont {
+  font-size: 13px;
+  font-weight: bold;
+  color: #2461ff;
+}
+
+.wrap .leftFrame .leftContent {
+  overflow: hidden;
+  width: 200px;
+  height: 100%;
+}
+
+.wrap .leftFrame .leftContent .left-menu {
+  width: 218px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.wrap.pageFullScreen {
+  padding-left: 0;
+}
+
+.wrap.pageFullScreen .drawBack {
+  opacity: 0;
+}
+
+.wrap.pageFullScreen .stretchOut {
+  opacity: 1;
+}
+
+.homeContent {
+  width: 100%;
+  height: 100%;
+  padding: 13px 7px 0 20px;
+  float: left;
+}
+
+.homeContent .tiles {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+.homeContent .tile {
+  padding: 0 13px 13px 0;
+  float: left;
+}
+
+.homeContent .tile .tilepanel {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 0 13px #e0e0e0;
+  padding-top: 56px;
+}
+
+.homeContent .tile .tilepanel h1 {
+  font-size: 22px;
+  line-height: 56px;
+  height: 56px;
+  padding-left: 65px;
+  color: #000000;
+  background: no-repeat 19px center;
+  white-space: nowrap;
+  margin-top: -56px;
+  float: left;
+  overflow: hidden;
+}
+
+.homeContent .tile .tilepanel .nav-thumb {
+  padding: 0 10px;
+  float: left;
+  width: 100%;
+  margin-top: -32px;
+  height: 22px;
+}
+
+.homeContent .tile .tilepanel .nav-thumb.nav-thumb2 {
+  padding: 0 30px 0 25px;
+  margin-top: -27px;
+}
+
+.homeContent .tile .tilepanel .nav-thumb ul.column {
+  width: 100%;
+  height: 22px;
+  overflow: hidden;
+  max-width: 450px;
+  margin: auto;
+  border-radius: 4px;
+  border: 1px solid #e3e3e3;
+  padding: 1px 2px;
+  text-align: justify;
+  line-height: 20px;
+}
+
+.homeContent .tile .tilepanel .nav-thumb ul li {
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.homeContent .tile .tilepanel .nav-thumb ul li:hover {
+  color: #4270F5;
+}
+
+.homeContent .tile .tilepanel .nav-thumb ul li.active {
+  color: #ffffff;
+  background-color: #4270F5;
+}
+
+.homeContent .tile .tilepanel .nav-thumb ul::after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+
+.homeContent .tile .tilepanel .thumb {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.homeContent .tile .tilepanel .thumb.showImg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.homeContent .tile .tilepanel .thumb.showImg img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  max-height: 80%;
+  max-width: 80%;
+}
+
+.homeContent .tile .tilepanel .thumb table, .homeContent .tile .tilepanel .thumb thead, .homeContent .tile .tilepanel .thumb tbody, .homeContent .tile .tilepanel .thumb tfoot, .homeContent .tile .tilepanel .thumb tr, .homeContent .tile .tilepanel .thumb th, .homeContent .tile .tilepanel .thumb td, .homeContent .tile .tilepanel .thumb caption {
+  display: block;
+  float: left;
+  border: 0;
+}
+
+.homeContent .tile .tilepanel .thumb table, .homeContent .tile .tilepanel .thumb thead, .homeContent .tile .tilepanel .thumb tbody, .homeContent .tile .tilepanel .thumb tfoot, .homeContent .tile .tilepanel .thumb caption, .homeContent .tile .tilepanel .thumb tr {
+  width: 100%;
+}
+
+.homeContent .tile .tilepanel .thumb caption, .homeContent .tile .tilepanel .thumb th, .homeContent .tile .tilepanel .thumb td, .homeContent .tile .tilepanel .thumb span {
+  cursor: default;
+}
+
+.homeContent .tile .tilepanel .thumb .graybg {
+  background-color: #f7f7f7;
+}
+
+.homeContent .tile .tilepanel .thumb .redFont {
+  color: red;
+}
+
+.homeContent .tile .tilepanel .thumb table {
+  height: 100%;
+  padding: 36px 0 26px 0;
+  position: relative;
+  font-size: 12px;
+  color: #000000;
+  line-height: 12px;
+}
+
+.homeContent .tile .tilepanel .thumb thead {
+  height: 36px;
+  margin-top: -36px;
+  background-color: #e9f1fe;
+  /*box-shadow: 0px 2px 3px #e2e6e5;*/
+}
+
+.homeContent .tile .tilepanel .thumb thead tr {
+  height: 100%;
+  line-height: 36px;
+}
+
+.homeContent .tile .tilepanel .thumb tbody {
+  height: 100%;
+}
+
+.homeContent .tile .tilepanel .thumb tbody td {
+  position: relative;
+}
+
+.homeContent .tile .tilepanel .thumb tbody td span {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  height: 12px;
+  bottom: 0;
+  left: 0;
+}
+
+.homeContent .tile .tilepanel .thumb tfoot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 26px;
+}
+
+.homeContent .tile .tilepanel .thumb tfoot tr {
+  height: 100%;
+  line-height: 26px;
+}
+
+.homeContent .tile .tilepanel .thumb tr {
+  height: 6.25%;
+  padding-left: 141px;
+  font-weight: bold;
+}
+
+.homeContent .tile .tilepanel .thumb tr.child {
+  font-weight: normal;
+}
+
+.homeContent .tile .tilepanel .thumb tr.child td:first-child span {
+  padding-left: 53px;
+}
+
+.homeContent .tile .tilepanel .thumb th, .homeContent .tile .tilepanel .thumb td {
+  width: 11.11111%;
+  height: 100%;
+}
+
+.homeContent .tile .tilepanel .thumb th:first-child, .homeContent .tile .tilepanel .thumb td:first-child {
+  width: 141px;
+  margin-left: -141px;
+}
+
+.homeContent .tile .tilepanel .thumb th:first-child span, .homeContent .tile .tilepanel .thumb td:first-child span {
+  text-align: left;
+  padding-left: 28px;
+}
+
+.homeContent .tile .tilepanel .thumb th span, .homeContent .tile .tilepanel .thumb td span {
+  width: 100%;
+  display: block;
+  float: left;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.homeContent .tile .tilepanel .thumb th {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1720px) {
+  .homeContent .tile .tilepanel .nav-thumb ul.column li {
+    padding: 0 7px;
+  }
+}
+
+@media screen and (max-width: 1660px) {
+  .homeContent .tile .tilepanel .nav-thumb ul.column li {
+    padding: 0 6px;
+  }
+}
+
+@media screen and (max-width: 1590px) {
+  .homeContent .tile .tilepanel .nav-thumb ul.column li {
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 1520px) {
+  .homeContent .tile .tilepanel .nav-thumb ul.column li {
+    padding: 0 4px;
+  }
+}
+
+@media screen and (max-width: 1460px) {
+  .homeContent .tile .tilepanel .nav-thumb ul.column li {
+    padding: 0 3px;
+  }
+}
+
+@media screen and (max-width: 1390px) {
+  .homeContent .tile .tilepanel .nav-thumb ul.column li {
+    padding: 0 2px;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .homeContent .tile .tilepanel .nav-thumb ul.column li {
+    padding: 0 1px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .homeContent .tile .tilepanel .nav-thumb ul.column li {
+    padding: 0 0px;
+  }
+}
+
+@media screen and (max-width: 1720px) {
+  .homeContent .tile .tilepanel .nav-thumb.nav-thumb2 ul.column li {
+    padding: 0 8px;
+  }
+}
+
+@media screen and (max-width: 1660px) {
+  .homeContent .tile .tilepanel .nav-thumb.nav-thumb2 ul.column li {
+    padding: 0 7px;
+  }
+}
+
+@media screen and (max-width: 1590px) {
+  .homeContent .tile .tilepanel .nav-thumb.nav-thumb2 ul.column li {
+    padding: 0 6px;
+  }
+}
+
+@media screen and (max-width: 1520px) {
+  .homeContent .tile .tilepanel .nav-thumb.nav-thumb2 ul.column li {
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 1460px) {
+  .homeContent .tile .tilepanel .nav-thumb.nav-thumb2 ul.column li {
+    padding: 0 4px;
+  }
+}
+
+@media screen and (max-width: 1390px) {
+  .homeContent .tile .tilepanel .nav-thumb.nav-thumb2 ul.column li {
+    padding: 0 3px;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .homeContent .tile .tilepanel .nav-thumb.nav-thumb2 ul.column li {
+    padding: 0 2px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .homeContent .tile .tilepanel .nav-thumb.nav-thumb2 ul.column li {
+    padding: 0 1px;
+  }
+}
+
+.homeContent .tile.tile1 {
+  width: 54.07407%;
+  height: 54.59184%;
+}
+
+.homeContent .tile.tile1 .tilepanel h1 {
+  background-image: url("../../../img/tile1.png");
+}
+
+.homeContent .tile.tile2 {
+  width: 45.92593%;
+  height: 54.59184%;
+}
+
+.homeContent .tile.tile2 .tilepanel {
+  padding-top: 88px;
+}
+
+.homeContent .tile.tile2 .tilepanel h1 {
+  margin-top: -88px;
+  background-image: url("../../../img/tile5.png");
+}
+
+.homeContent .tile.tile3 {
+  width: 31.0582%;
+  height: 45.40816%;
+}
+
+.homeContent .tile.tile3 .tilepanel {
+  padding-top: 117px;
+}
+
+.homeContent .tile.tile3 .tilepanel h1 {
+  margin-top: -117px;
+  background-image: url("../../../img/tile3.png");
+  background-position: 18px center;
+}
+
+.homeContent .tile.tile3 img {
+  display: block;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.homeContent .tile.tile3 .nav-tab {
+  margin-top: -61px;
+  height: 34px;
+  border-bottom: 1px solid #dddddd;
+  padding-left: 25px;
+  float: left;
+  width: 100%;
+}
+
+.homeContent .tile.tile3 .nav-tab li {
+  height: 34px;
+  float: left;
+  border: 1px solid #dddddd;
+  margin-right: 9px;
+  line-height: 32px;
+  font-size: 14px;
+  width: 72px;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+.homeContent .tile.tile3 .nav-tab li::after{
+  content: "\e663";
+  font-family: "iconfont" !important;
+  position: relative;
+  font-size: 10px;
+  width: 15px;
+  display: inline-block;
+  left: 5px;
+  bottom: 2px;
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg); 
+  -o-transform: rotate(180deg);
+}
+
+.homeContent .tile.tile3 .nav-tab li.active {
+  background-color: #ffffff;
+  border-bottom-color: #ffffff;
+  color: #4270F5;
+}
+
+.homeContent .tile.tile3 .nav-tab li.active::after {
+  left: 0;
+  bottom: 0;
+  transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+
+.homeContent .tile.tile3 .tilepanel .nav-thumb ul.column{
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  float: left;
+  height: 27px;
+  line-height: 26px;
+  padding: 0 14px;
+}
+.homeContent .tile.tile3 .tilepanel .nav-thumb ul li.active{
+  color: #4270F5;
+  background-color: #ffffff;
+}
+
+.homeContent .tile.tile4 {
+  width: 27.03704%;
+  height: 45.40816%;
+}
+
+.homeContent .tile.tile4 .tilepanel {
+  padding-top: 88px;
+}
+
+.homeContent .tile.tile4 .tilepanel h1 {
+  margin-top: -88px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  background-image: url("../../../img/tile4.png");
+}
+
+.homeContent .tile.tile5 {
+  width: 41.90476%;
+  height: 45.40816%;
+}
+
+.homeContent .tile.tile5 .tilepanel h1 {
+  background-image: url("../../../img/tile2.png");
+}
+
+/*主页移动端兼容*/
+html .mobileDevice {
+  min-width: 0px;
+  padding-top: 60px;
+}
+.mobileDevice header{
+  height: 60px;
+  margin-top: -60px;
+}
+
+.mobileDevice header .log {
+  width: 90px;
+  height: 60px;
+  background-size: 50%;
+}
+
+.mobileDevice header .title {
+  display: none;
+}
+
+.mobileDevice header .navbar {
+  left: 90px;
+  padding-left: 0px;
+  right: 160px;
+}
+
+.mobileDevice header .user {
+  width: 160px;
+  height: 60px;
+}
+
+.mobileDevice header .user .usercontent{
+  margin-top: 10px;
+}
+
+.mobileDevice header .user .username {
+  width: 60px;
+}
+
+.mobileDevice header .user .userexit {
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.mobileDevice .homeContent {
+  padding: 13px 7px 13px 20px;
+}
+
+.mobileDevice .homeContent .tiles {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.mobileDevice .homeContent .tile {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.mobileDevice .qy-tree ul , .mobileDevice .qy-tree li{
+  width: 200px;
+}
+.mobileDevice .homeContent .tile .tilepanel .nav-thumb ul.column li{
+  padding: 0 6px;
+}
+.mobileDevice .homeContent .tile .tilepanel .nav-thumb ul.column{
+  padding: 0 8px;
+}
+/*全屏*/
+.fullScreen{
+  right: 37px;
+  top: 93px;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  z-index: 100;
+  display: none;
+}
+
+.fullScreen::after{
+  content: "\e6cc";
+  font-family: "iconfont" !important;
+  position: relative;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.fullScreen.active::after{
+  content: "\e6cb";
+}
+
+.mobileDevice .fullScreen{
+  display: block;
+}
+/*# sourceMappingURL=map/main.css.map */

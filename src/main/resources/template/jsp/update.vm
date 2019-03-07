@@ -1,0 +1,92 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>${entityDescription}</title>
+</head>
+
+<script type="text/javascript">
+require([ "hide", "validate", "ajaxform", "select", "panel", "date" ],
+			function(hide) {
+
+		$("#stockgroundDustMeasures", "#boiler_form").select({name:"stockgroundDustMeasures",defaultValue:"${betonStirStation.stockgroundDustMeasures}",zIndex:9});
+		
+				$('#commit').click(function() {
+					$("#boiler_form").submit();
+				})
+				//提交表单
+				$("#boiler_form").validate({
+					submitHandler : function(form) {
+
+						var options = {
+							url : '../${entityLowCass}/update.jhtml',
+							type : 'post',
+							dataType : 'json',
+							success : function(data) {
+								qy.suc2({
+									title : '修改成功！'
+								});
+								grid1.loadData();
+								layer.closeAll('page');
+							},
+							error : function() {
+								qy.fail({
+									title : '修改失败'
+								});
+							}
+						};
+						$(form).ajaxSubmit(options);
+
+						return false;
+					}
+				});
+				hide.hide();
+			});
+</script>
+
+<body>
+
+<form id="boiler_form">
+    <div class="container">
+    
+    #foreach ($column in $columns)
+#if($column.update)
+#if($column.hidden)
+	 <input type="hidden" id="${column.name}" name="${column.name}" value="${${entityName}.${column.name}}"/>
+ #elseif($column.inputType == "textarea")
+ <div class="form-line">
+    <label for="${column.name}" >${column.caption} ：</label>
+ 	 <textarea id="${column.name}" name="${column.name}" placeholder="${column.caption}">${${entityName}.${column.name}}</textarea>
+	</div>
+ #else
+		<div class="infPara ">
+				<div class="infParaCon">
+					<label for="" class="infpLable">${column.caption}</label>
+					<div class="infpCon">
+						<input type="" class="input" id="${column.name}" name="${column.name}" value="${${entityName}.${column.name}}">
+					</div>
+				</div>
+			</div>
+#end
+#end	
+#end
+
+		<div class="infPara infPara2">
+				<div class="infParaCon">
+					<label for="" class="infpLable">备注</label>
+					<div class="infpCon">
+						<textarea class="textarea" name="description">${${entityName}.description}</textarea>
+					</div>
+				</div>
+			</div>
+
+
+    </div>
+
+</form>
+<input type="hidden" id="fieldHide" value="${fieldShowConfig}" />
+</body>
+</html>

@@ -1,0 +1,141 @@
+._s_contain {
+	height: 30px;
+	overflow: visible;
+	display: inline-block;
+	border: 1px solid #ccc;
+	position: relative;
+}
+._s_contain *{
+	box-sizing: border-box;
+}
+._s_contain *::-webkit-scrollbar {
+    width: 10px;
+}
+._s_contain *::-webkit-scrollbar-button {
+    display: none;
+}
+._s_contain *::-webkit-scrollbar-thumb {
+    border: 0;
+    border-radius: 6px;
+    background: #e7e7e7;
+}
+._caption {
+	width: 85%;
+	text-align: left;
+	float: left;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden; 
+}
+
+._s_contain1 {
+	position: absolute;
+	z-index: auto;
+	min-width: 100px;
+	width: 100%;
+	left: 0;
+}
+
+._s2 ._option {
+	width: 100%;
+	margin: 0px;
+	border-bottom: 1px solid #e5e5e5;
+	color: #a5a5a5;
+	font-size: 14px;
+	cursor: pointer;
+	line-height: 18px;
+	min-height: 29px;
+	padding: 5px;
+	text-align:left;
+	
+}
+
+._s2 ._option_disable {
+	width: 100%;
+	margin: 0px;
+	border-bottom: 1px solid #e5e5e5;
+	color: #a5a5a5;
+	font-size: 14px;
+	cursor: pointer;
+	line-height: 18px;
+	min-height: 29px;
+	padding: 5px;
+	text-align:left;
+	
+}
+
+._s2 ._option:hover {
+	/*border: 1px solid #eee;*/
+	color: #242424;
+	background: -webkit-linear-gradient(top , #ffffff ,#f3f3f3); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(top , #ffffff ,#f3f3f3); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(top , #ffffff ,#f3f3f3); /* Firefox 3.6 - 15 */
+	background: linear-gradient(top , #ffffff ,#f3f3f3); /* 鏍囧噯鐨勮娉� */
+}
+
+._s1 {
+	width: 100%;
+	height: 28px;
+	position: relative;
+	font-size: 14px;
+	line-height: 28px;
+	text-align: right;
+	padding: 0 5px;
+}
+
+._s2 {
+	width: 100%;
+	border: 1px solid #d4d8de;
+	display: none;
+	font-size: 20px;
+	background: #fff;
+	max-height: 300px;
+	overflow-y: auto;
+	overflow-x:hidden;
+}
+._s1 .icon-xiaodansanjiao{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 3px;
+	margin: auto;
+	height: 16px;
+	line-height: 16px;
+	font-weight: bold;
+	font-size: 12px;
+	color: #3c88ff;
+}
+._s2 ._option input._input_edit[type=text] {
+    /*width: 100%;
+    border: 1px solid #dddddd;
+    height: 100%;*/
+    /*width: calc(100% + 10px);
+    border: 0;
+    height: 28px;
+    line-height: 28px;
+    margin: -5px 0 -5px -5px;
+    padding: 5px;*/
+    width: calc(100% + 8px);
+    height: 26px;
+    line-height: 24px;
+    margin: -4px 0 -4px -4px;
+    padding: 5px;
+    border: 1px solid #e5e5e5;
+}
+._s2 ._option input._input_custom[type=text] {
+    /*width: calc(100% + 10px);
+    border: 0;
+    height: 28px;
+    line-height: 28px;
+    margin: -5px 0 -5px -5px;
+    padding: 5px;*/
+    width: calc(100% + 8px);
+    height: 26px;
+    line-height: 24px;
+    margin: -4px 0 -4px -4px;
+    padding: 5px;
+    border: 1px solid #e5e5e5;
+}
+._s2  .selected {
+	background: #007ACC;
+}

@@ -1,0 +1,39 @@
+input[type='text'] {
+	height: 30px;
+	width:200px;
+	border: 1px solid #ccc;
+	line-height: 30px;
+	font-size: 20px;
+	border-radius: 2px;
+}
+
+form {
+	border: 1px solid #ddd;
+	padding: 20px;
+}
+
+.form-title {
+	font-size: 25px;
+}
+
+.form-line {
+	height: 40px;
+	margin-top: 10px;
+	padding: 5px 0;
+}
+
+.form-line label{
+	width: 20%;
+	display: block;
+	float:left;
+}
+
+.form-line > div{
+	display: block;
+	float:left;
+}
+
+
+.error {
+	color: red;
+}

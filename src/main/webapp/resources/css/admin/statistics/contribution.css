@@ -1,0 +1,47 @@
+*{ margin:0; padding:0;}  
+.contribution{ width: 80%; background:#whitesmoke; padding-bottom:50px;float: left;}  
+.contribution dl{margin:10px 0 0 10px; float:left;  background:whitesmoke;}  
+.contribution dt{width:20vw; margin:5px; height:400px; background:#FFF; padding: 0px;}  
+.contribution dd{width:20vw; margin:0 0 5px 5px; height:30px; line-height:30px; background:#FFFFFF; text-align:center;}
+/*#contribution dt{width:100%; margin:5px; height:600px; background:#FFF; padding: 0px;}  
+#contribution dd{width:100%; margin:0 0 5px 5px; height:30px; line-height:30px; background:#FFFFFF; text-align:center;}*/
+#areaSelect{
+	float: left;
+	width: 20%;
+	margin:10px 0px;
+}
+#areaSelect>button{
+	margin-bottom: 5px;
+}
+ul{
+	list-style: none;
+}
+ul li{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 5px;
+	padding: 3px 6px;
+	border:1px solid #DEDEDE;
+	-webkit-box-shadow: #DEDEDE 0px 0px 2px;
+	-moz-box-shadow: #DEDEDE 0px 0px 2px;
+	box-shadow: #DEDEDE 0px 0px 2px;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+ul li:active,li:focus{
+	background: #31b0d5;
+	color: #F5F5F5;
+}
+ul li.focus,ul li.active{
+	background: #31b0d5;
+	color: #F5F5F5;
+}
+dt>div:nth-child(1){
+	width: 100%;
+	height: 100%;
+}

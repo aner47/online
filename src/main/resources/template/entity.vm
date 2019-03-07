@@ -1,0 +1,39 @@
+package com.qianyue.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+/**
+ * 系统配置
+ * @author qianyue
+ *
+ */
+@Entity
+@Table(name="${entityTable}")
+@SequenceGenerator(name="sequenceGenerator",sequenceName="seq_${entityTable}")
+public class ${entityName} extends BaseEntity<Long> {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+		
+	#foreach ($field in $fields)
+/**
+	 * ${field.description}
+	 */
+	private ${field.fieldType}  ${field.fieldName};
+	
+	#end
+	#foreach ($field in $fields)
+
+	public ${field.fieldType} get$field.fieldName.substring(0,1).toUpperCase()$field.fieldName.substring(1,$field.fieldName.length())(){
+		return  ${field.fieldName};
+	}
+	public void set$field.fieldName.substring(0,1).toUpperCase()$field.fieldName.substring(1,$field.fieldName.length())(${field.fieldType} ${field.fieldName}) {
+		this.${field.fieldName} = ${field.fieldName};
+	}
+	#end
+
+}

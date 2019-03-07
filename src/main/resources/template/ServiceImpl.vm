@@ -1,0 +1,33 @@
+package ${serviceImplPackage};
+
+
+
+import org.springframework.stereotype.Service;
+
+import ${entity};
+import ${entityService};
+import com.${project}.service.impl.BaseServiceImpl;
+/**
+ * 
+ * ${entityDescription}服务实现
+ *
+ */
+@Service("${beanName}")
+public class ${entityName}ServiceImpl extends BaseServiceImpl<${entityName}, ${idType}> implements ${entityServiceName} {
+	
+	
+	@Override
+	public ${entityName} save${entityName}(${entityName} ${firstentityName}) throws Exception {
+		
+		return save(${firstentityName});
+	}
+
+
+	@Override
+	public ${entityName} update${entityName}(${entityName} ${firstentityName}) throws Exception {
+		//郑有权
+		
+		return update(${firstentityName},"project");
+	}
+	
+}

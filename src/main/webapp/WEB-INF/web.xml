@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<display-name>websocket</display-name>
+	<description>websocket</description>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath*:/applicationContext.xml
+		</param-value>
+	</context-param>
+
+	
+	
+	
+	
+	 <!-- post乱码处理 -->  
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/ws/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>*.jhtml</url-pattern>
+	</filter-mapping>
+<!-- 配置shiro的核心拦截器 -->  
+     <filter>
+        <filter-name>shiroFilter</filter-name>  
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>  
+    </filter>  
+    <filter-mapping>  
+        <filter-name>shiroFilter</filter-name>  
+        <url-pattern>/*</url-pattern>  
+    </filter-mapping>  
+   
+   <filter>
+	    <filter-name>OpenSessionInViewFilter</filter-name>
+	    <filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+    </filter>
+
+	<filter-mapping>
+	    <filter-name>OpenSessionInViewFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>springmvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath*:/applicationContext-mvc.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>*.jhtml</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>/ws/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DruidStatView</servlet-name>
+		<servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DruidStatView</servlet-name>
+		<url-pattern>/druid/*</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+		<listener-class>org.springframework.web.util.WebAppRootListener</listener-class>
+	</listener>
+
+	<listener>  
+        <listener-class>  
+            org.springframework.web.context.request.RequestContextListener  
+        </listener-class>  
+ 	</listener> 
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/jsp/404.jsp</location>
+	</error-page>
+	<welcome-file-list>
+		<welcome-file>/web/login.jhtml</welcome-file>
+	</welcome-file-list>
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
+			<taglib-location>/WEB-INF/c.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+
+</web-app>
